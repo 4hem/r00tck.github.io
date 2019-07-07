@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://5illyman.github.io/image/re1/re1-1.png">
 <meta property="og:image" content="http://5illyman.github.io/image/re1/re1-2.png">
 <meta property="og:image" content="http://5illyman.github.io/image/re1/re1-3.png">
-<meta property="og:updated_time" content="2019-07-06T14:15:27.159Z">
+<meta property="og:updated_time" content="2019-07-07T10:52:17.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逆向进阶之旅——nctf（maze）">
 <meta name="twitter:description" content="最近觉得自己的逆向技术真的堪忧，在学长的建议下我决定多刷题并且多记录心得，题目取自各大平台中等难度的题（部分不会的我会参考别人的wp，毕竟学到东西才是目的） 1.题目这是南邮的一道题，maze是迷宫的意思：">
@@ -206,7 +206,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">747字</span>
+        <span class="post-count">784字</span>
       </span>
     </span>
 
@@ -259,9 +259,9 @@
 <p>打开发现是个elf文件，载入ida，找到main函数，F5，开始分析：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">__int64 __<span class="function">fastcall <span class="title">main</span><span class="params">(__int64 a1, <span class="keyword">char</span> **a2, <span class="keyword">char</span> **a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">char</span> *v3; <span class="comment">// rsi</span></span><br><span class="line">  <span class="keyword">signed</span> __int64 v4; <span class="comment">// rbx</span></span><br><span class="line">  <span class="keyword">signed</span> <span class="keyword">int</span> v5; <span class="comment">// eax</span></span><br><span class="line">  <span class="keyword">char</span> v6; <span class="comment">// bp</span></span><br><span class="line">  <span class="keyword">char</span> v7; <span class="comment">// al</span></span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">char</span> *v8; <span class="comment">// rdi</span></span><br><span class="line">  __int64 v10; <span class="comment">// [rsp+0h] [rbp-28h]</span></span><br><span class="line"></span><br><span class="line">  v10 = <span class="number">0L</span>L;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Input flag:"</span>);</span><br><span class="line">  <span class="built_in">scanf</span>(<span class="string">"%s"</span>, &amp;input, <span class="number">0L</span>L);</span><br><span class="line">  <span class="keyword">if</span> ( <span class="built_in">strlen</span>(&amp;input) != <span class="number">24</span> || (v3 = <span class="string">"nctf&#123;"</span>, <span class="built_in">strncmp</span>(&amp;input, <span class="string">"nctf&#123;"</span>, <span class="number">5u</span>LL)) || *(&amp;byte_6010BF + <span class="number">24</span>) != <span class="string">'&#125;'</span> )<span class="comment">// nctf&#123;**********&#125;，且长度是24</span></span><br><span class="line">  &#123;</span><br><span class="line">LABEL_22:</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Wrong flag!"</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  v4 = <span class="number">5L</span>L;</span><br><span class="line">  <span class="keyword">if</span> ( <span class="built_in">strlen</span>(&amp;input) - <span class="number">1</span> &gt; <span class="number">5</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">while</span> ( <span class="number">1</span> )</span><br><span class="line">    &#123;</span><br><span class="line">      v5 = *(&amp;input + v4);</span><br><span class="line">      v6 = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">if</span> ( v5 &gt; <span class="number">78</span> )</span><br><span class="line">      &#123;</span><br><span class="line">        v5 = (<span class="keyword">unsigned</span> __int8)v5;</span><br><span class="line">        <span class="keyword">if</span> ( (<span class="keyword">unsigned</span> __int8)v5 == <span class="string">'O'</span> )</span><br><span class="line">        &#123;</span><br><span class="line">          v7 = ((__int64 (__fastcall *)(<span class="keyword">char</span> *, <span class="keyword">const</span> <span class="keyword">char</span> *))sub_400650)((<span class="keyword">char</span> *)&amp;v10 + <span class="number">4</span>, v3);<span class="comment">// v7 = v10[4] &gt; 0</span></span><br><span class="line">                                                <span class="comment">// v10--</span></span><br><span class="line">          <span class="keyword">goto</span> LABEL_14;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ( v5 == <span class="string">'o'</span> )</span><br><span class="line">        &#123;</span><br><span class="line">          v7 = ((__int64 (__fastcall *)(<span class="keyword">char</span> *, <span class="keyword">const</span> <span class="keyword">char</span> *))sub_400660)((<span class="keyword">char</span> *)&amp;v10 + <span class="number">4</span>, v3);<span class="comment">// v10[4]++</span></span><br><span class="line">                                                <span class="comment">// v7 = v10[4] &lt; 8</span></span><br><span class="line">          <span class="keyword">goto</span> LABEL_14;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">else</span></span><br><span class="line">      &#123;</span><br><span class="line">        v5 = (<span class="keyword">unsigned</span> __int8)v5;</span><br><span class="line">        <span class="keyword">if</span> ( (<span class="keyword">unsigned</span> __int8)v5 == <span class="string">'.'</span> )</span><br><span class="line">        &#123;</span><br><span class="line">          v7 = sub_400670(&amp;v10, v3);            <span class="comment">// v7 = v10[4] &gt; 0</span></span><br><span class="line">                                                <span class="comment">// v10[4]--</span></span><br><span class="line">          <span class="keyword">goto</span> LABEL_14;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ( v5 == <span class="string">'0'</span> )</span><br><span class="line">        &#123;</span><br><span class="line">          v7 = sub_400680(&amp;v10, v3);            <span class="comment">// v10[4]++</span></span><br><span class="line">                                                <span class="comment">// v7 = v10[4] &lt; 8</span></span><br><span class="line">LABEL_14:</span><br><span class="line">          v6 = v7;</span><br><span class="line">          <span class="keyword">goto</span> LABEL_15;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">LABEL_15:</span><br><span class="line">      v3 = (<span class="keyword">const</span> <span class="keyword">char</span> *)HIDWORD(v10);</span><br><span class="line">      <span class="keyword">if</span> ( !(<span class="keyword">unsigned</span> __int8)sub_400690(asc_601060, HIDWORD(v10), (<span class="keyword">unsigned</span> <span class="keyword">int</span>)v10) )<span class="comment">// 走32或35</span></span><br><span class="line">        <span class="keyword">goto</span> LABEL_22;</span><br><span class="line">      <span class="keyword">if</span> ( ++v4 &gt;= <span class="built_in">strlen</span>(&amp;input) - <span class="number">1</span> )</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span> ( v6 )</span><br><span class="line">          <span class="keyword">break</span>;</span><br><span class="line">LABEL_20:</span><br><span class="line">        v8 = <span class="string">"Wrong flag!"</span>;</span><br><span class="line">        <span class="keyword">goto</span> LABEL_21;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( asc_601060[<span class="number">8</span> * (<span class="keyword">signed</span> <span class="keyword">int</span>)v10 + SHIDWORD(v10)] != <span class="number">35</span> )<span class="comment">// 最后一步需要为35</span></span><br><span class="line">    <span class="keyword">goto</span> LABEL_20;</span><br><span class="line">  v8 = <span class="string">"Congratulations!"</span>;</span><br><span class="line">LABEL_21:</span><br><span class="line">  <span class="built_in">puts</span>(v8);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0L</span>L;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>由最后判断时为地图地址601060+8*v9+SHIDWORD(v9)可以猜出，<br>v9为行数，每行8个字符，SHIDWORD为取v9的下一字节。</p>
+<p>由最后判断时为地图地址601060+8*v10+SHIDWORD(v10)可以猜出，<br>v10为行数，每行8个字符，SHIDWORD为取v10的下一字节。</p>
 <p>其中的asc_601060中：<br><img src="/image/re1/re1-2.png" alt></p>
-<p>其中的asc_601060中：<br><img src="/image/re1/re1-3.png" alt></p>
+<p>Hex View查看：<br><img src="/image/re1/re1-3.png" alt></p>
 <p>复制下来，正好是一个8*8方阵，只有20H，2AH,23H三个数字，<br>并且要求每步都落在2AH或23H上，最后一步落在35上且不能出界。（即横纵坐标超出8）：</p>
 <pre><code>20 20 2A 2A 2A 2A 2A 2A 
 
@@ -277,7 +277,7 @@
 
 2A 2A 20 20 20 20 20 2A 
 
-2A 2A 2A 2A 2A 2A 2A 2A</code></pre><p>O,o,.,0应该是操作上下左右的。（具体哪个是上下左右我不太清楚）（和题目迷宫联系起来了）</p>
+2A 2A 2A 2A 2A 2A 2A 2A</code></pre><p>‘O’,’o’,’.’,’0’应该是操作上下左右的。（具体哪个是上下左右我不太清楚,但是上面’O’和’.’算法相似，其他两个算法相似，应该是一对上下和一对左右，那么都试一试吧）（和题目迷宫联系起来了）</p>
 <p>那么就开始走了</p>
 <p>路径为：右下右右下下左下下下右右右右上上左左，到达终点<br>最后一个一个试’O’,’o’,’.’,’0’代表的意义，然后提交</p>
 <p>最终得到’O’,’o’,’.’,’0’分别代表‘下’，‘右’，‘上’，‘左’。<br>得到flag：nctf{o0oo00O000oooo..OO}</p>
@@ -398,6 +398,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/07/07/re2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          逆向进阶之旅——9447 CTF 2014（no-strings-attached）
+        
+      </div>
+    </a>
   
   
     <a href="/2019/06/28/Windows Terminal/" id="article-nav-older" class="article-nav-link-wrap">
@@ -585,11 +594,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">逆向进阶</a>
+                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Windows</a>
+                <a href="javascript:void(0)" class="js-tag color5">逆向进阶</a>
               </li>
             
             <div class="clearfix"></div>
