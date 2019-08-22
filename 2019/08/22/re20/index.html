@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://r00tck.github.io">
-  <title>Archives: 2019/8 | 咕噜咕噜</title>
+  <title>逆向进阶之旅——nullcon-hackim-2016（zorropub） | 咕噜咕噜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
   <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -23,14 +23,21 @@
         border-left-color: #6d6d6d;    /*左边框颜色*/
     }
   </style>
-  <meta name="keywords" content="咕噜咕噜">
-<meta property="og:type" content="website">
-<meta property="og:title" content="咕噜咕噜">
-<meta property="og:url" content="http://r00tck.github.io/archives/2019/08/index.html">
+  <meta name="description" content="题目来自攻防世界：">
+<meta name="keywords" content="逆向进阶">
+<meta property="og:type" content="article">
+<meta property="og:title" content="逆向进阶之旅——nullcon-hackim-2016（zorropub）">
+<meta property="og:url" content="http://r00tck.github.io/2019/08/22/re20/index.html">
 <meta property="og:site_name" content="咕噜咕噜">
+<meta property="og:description" content="题目来自攻防世界：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://r00tck.github.io/image/re20/re20-1.png">
+<meta property="og:image" content="http://r00tck.github.io/image/re20/re20-2.png">
+<meta property="og:updated_time" content="2019-08-22T09:02:23.503Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="咕噜咕噜">
+<meta name="twitter:title" content="逆向进阶之旅——nullcon-hackim-2016（zorropub）">
+<meta name="twitter:description" content="题目来自攻防世界：">
+<meta name="twitter:image" content="http://r00tck.github.io/image/re20/re20-1.png">
   
     <link rel="alternative" href="/atom.xml" title="咕噜咕噜" type="application/atom+xml">
   
@@ -163,36 +170,111 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-re20" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      逆向进阶之旅——nullcon-hackim-2016（zorropub）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/22/re20/" class="archive-article-date">
+
+		<!--显示阅读次数-->
+		
+		  <br/>
+		  <a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;">
+		  <span class="icon-sort"></span>
+		  <span id="busuanzi_container_page_pv" style="color:#ef7522;font-size:14px;">
+					阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+		  </span>
+		  </a>
+		  
+        
+        <a href="/2019/08/22/re20/" class="archive-article-date">
   	<time datetime="2019-08-22T07:42:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/22/re20/">逆向进阶之旅——nullcon-hackim-2016（zorropub）</a>
-    </h1>
-  
+		
+          <div style="margin-top:10px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">431字</span>
+      </span>
+    </span>
 
-        <div class="article-info info-on-right">
+    <span class="post-time">
+        |  
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">2分</span>
+      </span>
+    </span>
+</div>
+
           
+        
+      </header>
+		
+		
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>来自攻防世界：</p>
+<a id="more"></a>
+
+<p><img src="/image/re20/re20-1.png" alt></p>
+<p>反编译分析一波：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> __<span class="function">fastcall <span class="title">main</span><span class="params">(__int64 a1, <span class="keyword">char</span> **a2, <span class="keyword">char</span> **a3)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">size_t</span> v3; <span class="comment">// rax</span></span><br><span class="line">  <span class="keyword">int</span> v5; <span class="comment">// [rsp+1Ch] [rbp-104h]</span></span><br><span class="line">  <span class="keyword">int</span> v6; <span class="comment">// [rsp+20h] [rbp-100h]</span></span><br><span class="line">  <span class="keyword">int</span> i; <span class="comment">// [rsp+24h] [rbp-FCh]</span></span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> seed; <span class="comment">// [rsp+28h] [rbp-F8h]</span></span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">int</span> v9; <span class="comment">// [rsp+2Ch] [rbp-F4h]</span></span><br><span class="line">  <span class="keyword">char</span> v10; <span class="comment">// [rsp+30h] [rbp-F0h]</span></span><br><span class="line">  <span class="keyword">char</span> v11[<span class="number">16</span>]; <span class="comment">// [rsp+90h] [rbp-90h]</span></span><br><span class="line">  <span class="keyword">char</span> v12[<span class="number">32</span>]; <span class="comment">// [rsp+A0h] [rbp-80h]</span></span><br><span class="line">  <span class="keyword">char</span> s; <span class="comment">// [rsp+C0h] [rbp-60h]</span></span><br><span class="line">  <span class="keyword">char</span> s1[<span class="number">40</span>]; <span class="comment">// [rsp+E0h] [rbp-40h]</span></span><br><span class="line">  <span class="keyword">unsigned</span> __int64 v15; <span class="comment">// [rsp+108h] [rbp-18h]</span></span><br><span class="line"></span><br><span class="line">  v15 = __readfsqword(<span class="number">0x28</span>u);</span><br><span class="line">  seed = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">puts</span>(<span class="string">"Welcome to Pub Zorro!!"</span>);</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"Straight to the point. How many drinks you want?"</span>, a2);</span><br><span class="line">  __isoc99_scanf(<span class="string">"%d"</span>, &amp;v5);</span><br><span class="line">  <span class="keyword">if</span> ( v5 &lt;= <span class="number">0</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"You are too drunk!! Get Out!!"</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">"OK. I need details of all the drinks. Give me %d drink ids:"</span>, (<span class="keyword">unsigned</span> <span class="keyword">int</span>)v5);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; v5; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    __isoc99_scanf(<span class="string">"%d"</span>, &amp;v6);</span><br><span class="line">    <span class="keyword">if</span> ( v6 &lt;= <span class="number">16</span> || v6 &gt; <span class="number">65535</span> )               <span class="comment">// 限定id</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="built_in">puts</span>(<span class="string">"Invalid Drink Id."</span>);</span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">"Get Out!!"</span>);</span><br><span class="line">      <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    seed ^= v6;</span><br><span class="line">  &#125;</span><br><span class="line">  i = seed;</span><br><span class="line">  v9 = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span> ( i )</span><br><span class="line">  &#123;</span><br><span class="line">    ++v9;</span><br><span class="line">    i &amp;= i - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> ( v9 != <span class="number">10</span> )</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Looks like its a dangerous combination of drinks right there."</span>);</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Get Out, you will get yourself killed"</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  srand(seed);</span><br><span class="line">  MD5_Init(&amp;v10);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">29</span>; ++i )</span><br><span class="line">  &#123;</span><br><span class="line">    v9 = rand() % <span class="number">1000</span>;</span><br><span class="line">    <span class="built_in">sprintf</span>(&amp;s, <span class="string">"%d"</span>, v9);</span><br><span class="line">    v3 = <span class="built_in">strlen</span>(&amp;s);</span><br><span class="line">    MD5_Update(&amp;v10, &amp;s, v3);</span><br><span class="line">    v12[i] = v9 ^ LOBYTE(dword_6020C0[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  v12[i] = <span class="number">0</span>;</span><br><span class="line">  MD5_Final(v11, &amp;v10);</span><br><span class="line">  <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt;= <span class="number">15</span>; ++i )</span><br><span class="line">    <span class="built_in">sprintf</span>(&amp;s1[<span class="number">2</span> * i], <span class="string">"%02x"</span>, (<span class="keyword">unsigned</span> __int8)v11[i]);</span><br><span class="line">  <span class="keyword">if</span> ( <span class="built_in">strcmp</span>(s1, <span class="string">"5eba99aff105c9ff6a1a913e343fec67"</span>) )<span class="comment">// 比较MD5</span></span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">puts</span>(<span class="string">"Try different mix, This mix is too sloppy"</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">-1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">printf</span>(<span class="string">"\nYou choose right mix and here is your reward: The flag is nullcon&#123;%s&#125;\n"</span>, v12);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这道题每一次输入的id都和结果有关系，咱们需要碰到合适的id才可以得到flag，只能爆破了</p>
+<p>脚本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">a = <span class="string">''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">16</span>,<span class="number">65535</span>):</span><br><span class="line">    v9 = <span class="number">0</span></span><br><span class="line">    s = i</span><br><span class="line">    <span class="keyword">while</span> i:</span><br><span class="line">        v9 += <span class="number">1</span></span><br><span class="line">        i &amp;= i<span class="number">-1</span></span><br><span class="line">    <span class="keyword">if</span> v9 == <span class="number">10</span>:</span><br><span class="line">        a += s</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> a:</span><br><span class="line">    p=process(<span class="string">"./zorro_bin"</span>)</span><br><span class="line">    p.recv()</span><br><span class="line">    p.sendline(<span class="string">'1'</span>)</span><br><span class="line">    p.sendline(str(i))</span><br><span class="line">    text=p.recv()</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'nullcon'</span> <span class="keyword">in</span> text:</span><br><span class="line">        print(text)</span><br><span class="line">		print(i)</span><br></pre></td></tr></table></figure>
+
+<p>得到id和flag：</p>
+<p><img src="/image/re20/re20-2.png" alt></p>
+
+      
+		   <div> <blockquote> <strong>本文作者：</strong>  咕噜咕噜  <br> <strong>本文链接：</strong> http://r00tck.github.io/2019/08/22/re20/ <br> <strong>版权声明：</strong> 本作品采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a> 进行许可。转载请注明出处！  <br> <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>  </blockquote>  <hr> <center><strong>感谢有你，伴我成长。</strong></center> <hr> </div> 
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/image/zfb.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/image/wx.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,134 +286,122 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://r00tck.github.io/2019/08/22/re20/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/17/re19/" class="archive-article-date">
-  	<time datetime="2019-08-17T13:24:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-17</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/17/re19/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">逆向进阶之旅——网络与信息安全专项赛（flat）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/17/re19/">逆向进阶之旅——网络与信息安全专项赛（flat）</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">逆向进阶</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/11/re18/" class="archive-article-date">
-  	<time datetime="2019-08-11T03:49:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/11/re18/">逆向进阶之旅——BUUCTF（Youngter-drive）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">逆向进阶</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/10/re17/" class="archive-article-date">
-  	<time datetime="2019-08-10T10:15:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/10/re17/">逆向进阶之旅——NCTF（Wxyvm1）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">逆向进阶</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
 
+  
+
+  
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
 
           </div>
         </div>
@@ -382,8 +452,8 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
